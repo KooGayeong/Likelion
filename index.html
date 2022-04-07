@@ -6,11 +6,14 @@
   <title>구가영의 이력서</title>
   <link rel="stylesheet" href="codelion.css">
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
 </head>
 
 <body>
     <script type="text/javascript">
+    
         Kakao.init('fdb43606db6f4edd2e23528d718fd5ff');
+        function sendlink() {
         Kakao.Link.createDefaultButton({
           container: '#create-kakao-link-btn',
           objectType: 'feed',
@@ -45,13 +48,13 @@
               },
             },
           ],
-        })
+        })}
       </script>
 
-    <a id="create-kakao-link-btn" href="javascript:;">
+    <a id="create-kakao-link-btn" href="javascript:;" onclick="sendlink()">
         <img
           src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-          alt="카카오링크 보내기 버튼"
+          alt="카카오링크 보내기 버튼" 
         />
       </a>
  
